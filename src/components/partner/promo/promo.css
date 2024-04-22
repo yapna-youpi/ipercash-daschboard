@@ -1,0 +1,96 @@
+.partner-promo {
+    min-height: 80vh;
+    padding: 2%;
+    color: var(--night-blue);
+}
+
+/* .partner-promo .user-row h3 {
+    font-weight: 500;
+} */
+
+.partner-promo .summary {
+    width: 60vw;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.partner-promo h2 {
+    margin-bottom: 20px;
+}
+
+.partner-promo .summary .details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-promo .summary span {
+    display: block;
+    margin: 20px 0px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+
+.partner-promo .summary .gain {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 3px solid var(--red);
+    border-radius: 50%;
+}
+
+.partner-promo .summary .gain div:nth-child(1) {
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+.partner-promo .summary .gain div:nth-child(2) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+
+.partner-promo .transactions {
+    max-height: 200vh;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+
+.partner-promo .tx-row, .partner-promo .user-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 2%;
+    border-top: 1px solid var(--background);
+    font-weight: 300;
+}
+
+.partner-promo .tx-row div, .partner-promo .user-row div {
+    flex: 1;
+}
+
+.partner-promo .user-row div:nth-child(1) {
+    flex: 2;
+}
+
+.partner-promo .usr {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}

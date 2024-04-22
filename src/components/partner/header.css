@@ -1,0 +1,65 @@
+.partner-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 10vh;
+    padding: 0px 2%;
+}
+.partner-header .go-back {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+.partner-header .notifs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+}
+.partner-header .notifs:hover {
+    cursor: pointer;
+}
+.partner-header .notifs:active {
+    background-color: rgba(19, 19, 19, 0.377);
+}
+.partner-header .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    background-color: var(--warning);
+    border-radius: 50%;
+    font-size: .9em;
+    font-weight: 600;
+    color: var(--white);
+}
+.partner-header .number.problem {
+    background-color: var(--red);
+}
+.partner-header .user {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 15px;
+}
+.partner-header .user img {
+    display: block;
+    width: 2vw;
+    /* height: 3vw; */
+    margin-right: 15px;
+    border-radius: 50%;
+    border: none;
+}
+.partner-header .user img:hover {
+    cursor: pointer;
+}

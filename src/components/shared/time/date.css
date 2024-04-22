@@ -1,0 +1,60 @@
+
+.choose-time {
+    position: relative;
+    margin-left: 10px;
+    /* border: 1px solid #000; */
+
+}
+.choose-time .dropdown {
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+.choose-time .dropdown span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    /* margin: 0px; */
+    margin-left: 10px;
+    /* margin-right: 100%; */
+    background: var(--night-blue);
+    clip-path: polygon(50% 80%, 10% 24%, 86% 24%);
+}
+.countries-list {
+    position: absolute;
+    top: 97%;
+    margin-top: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 0.5s ease-out;
+}
+.countries-list.show {
+    /* height: 180px; */
+    /* overflow-y: auto; */
+    max-height: 40vh;
+}
+.countries-list .time {
+    display: flex;
+    border-top: 1px solid var(--background);
+}
+.countries-list h4 {
+    margin: 14px 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .choose-time .dropdown {
+        cursor: pointer;
+    }
+    .choose-time .dropdown span:hover {
+        background: var(--night-blue);
+    }
+    .countries-list .time:hover {
+        background: var(--transparent);
+        cursor: pointer;
+    }
+    
+}

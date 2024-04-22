@@ -1,0 +1,95 @@
+.sponsor-details {
+    min-height: 80vh;
+    padding: 2%;
+    color: var(--night-blue);
+}
+
+/* .sponsor-details .user-row h3 {
+    font-weight: 500;
+} */
+
+.sponsor-details .summary {
+    width: 60vw;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.sponsor-details h2 {
+    margin-bottom: 20px;
+}
+
+.sponsor-details .summary .details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sponsor-details .summary span {
+    display: block;
+    margin: 20px 0px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+
+.sponsor-details .summary .gain {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 3px solid var(--red);
+    border-radius: 50%;
+}
+
+.sponsor-details .summary .gain div:nth-child(1) {
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+.sponsor-details .summary .gain div:nth-child(2) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+
+.sponsor-details .transactions {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.sponsor-details .tx-row, .sponsor-details .user-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 2%;
+    border-top: 1px solid var(--background);
+    font-weight: 300;
+}
+
+.sponsor-details .tx-row div, .sponsor-details .user-row div {
+    flex: 1;
+}
+
+.sponsor-details .user-row div:nth-child(1) {
+    flex: 2;
+}
+
+.sponsor-details .usr {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}

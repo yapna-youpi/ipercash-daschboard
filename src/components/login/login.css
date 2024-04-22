@@ -1,0 +1,109 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--berge);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    min-width: 300px;
+    /* height: 40vh; */
+    padding: 0% 6%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.login .icon {
+    margin-top: 10px;
+}
+.login h1 {
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.login input {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: 40px;
+    padding: 2% 4%;
+    background-color: #f3f7fa;
+    border: 1px solid #0a0eff4d;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.3em;
+    color: var(--nigth-blue);
+    box-shadow:  0px 0px 0px #26fb00cc;
+    transition: all 0.3s ease-out;
+}
+.login input:focus {
+    border: 1px solid #0a0effcc;
+    box-shadow:  0px 0px 6px #0a0effcc;
+}
+.login button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto;
+    padding: 4%;
+    /* background-image: linear-gradient(to right top, #c31432, #240b36); */
+    background-color: #c31432;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+.login .forgot-password {
+    margin-bottom: 20px;
+    color: var(--second-red);
+}
+.login .forgot-password:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.bubble {
+    border: 1px solid #fff;
+    width: 40vw;
+    min-width: 550px;
+    height: 40vw;
+    min-height: 550px;
+    content: '';
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-image: linear-gradient(to right top, #c31432, #240b36);
+    /* background-size: cover; */
+    animation: wave 15s linear infinite;
+    margin: 100px auto;
+}
+
+@keyframes wave {
+    20% {
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47% ;
+    }
+    40% {
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64% ;
+    }
+    60% {
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53% ;
+    }
+    80% {
+        border-radius: 60% 40% 32% 60% / 38% 36% 63% 62% ;
+    }
+}

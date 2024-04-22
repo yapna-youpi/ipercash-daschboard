@@ -1,0 +1,90 @@
+.statement {}
+
+.statement h1 {
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+
+}
+
+.statement .general {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--white);
+}
+
+.general .operation {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    /* border: 1px solid #000; */
+    text-align: center;
+}
+
+.general .items .bar {
+    /* width: 70%; */
+    margin: auto;
+    border: 1px solid var(--berge);
+    border-radius: 8px;
+}
+
+.general .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* border: 1px solid #000; */
+}
+
+.general .item .circle {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    border-radius: 50%;
+    border: 6px solid;
+}
+
+.general .item .details {
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: space-between; */
+    margin-left: 20px;
+}
+
+.general .item .details div {
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.general .vbar {
+    height: 250px;
+    border: 1px solid var(--berge);
+    border-radius: 8px;
+}
+
+.general .total {
+    /* border: 1px solid #000; */
+    font-size: 1.3em;
+}
+
+.general .total span {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 15px 10px;
+}
+
+.statement .graph {
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--white);
+}

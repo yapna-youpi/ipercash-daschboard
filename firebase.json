@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "dashboard-05",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

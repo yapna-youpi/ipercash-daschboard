@@ -1,0 +1,41 @@
+.content {
+
+}
+.content .balances {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid rgb(243, 11, 11); */
+}
+.content .transaction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    /* border: 1px solid #000; */
+}
+.content .transactions {
+    flex: 1;
+    /* padding: 2%; */
+    background-color: var(--white);
+}
+.content .transactions h3 {
+    padding: 2%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 2em;
+
+}
+.content .chart {
+    margin-left: 20px;
+    padding: 2%;
+    background-color: var(--white);
+}
+.content .chart .circle {
+    width: 250px;
+    height: 250px;
+    background-color: var(--background);
+    border-radius: 50%;
+}
+.content .chart .country {
+    margin: 15px auto;
+}

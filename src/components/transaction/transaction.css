@@ -1,0 +1,55 @@
+.tx-details {
+    min-height: 80vh;
+    padding: 4%;
+}
+
+.tx-details>div {
+    margin-top: 3vh;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.tx-details .transaction {
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-top: 20px;
+}
+.tx-details .transaction > div {
+    flex: 1;
+}
+
+.tx-details span {
+    display: block;
+    margin: 20px 0px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+
+.tx-details .control {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.tx-details .control button, .tx-details center button {
+    margin-right: 20px;
+    padding: 1% 2%;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.tx-details .results {
+    padding: 4%;
+    font-size: 1.2em;
+}
+
+.tx-details .description {
+    width: 60%;
+}

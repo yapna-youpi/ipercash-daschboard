@@ -1,0 +1,9 @@
+.sell {}
+
+
+.sell .chart {
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}

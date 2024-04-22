@@ -1,0 +1,100 @@
+.partner-sponsor {
+    min-height: 80vh;
+    padding: 2%;
+    color: var(--night-blue);
+}
+
+/* .partner-sponsor .user-row h3 {
+    font-weight: 500;
+} */
+
+.partner-sponsor .summary {
+    width: 60vw;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.partner-sponsor h2 {
+    margin-bottom: 20px;
+}
+
+.partner-sponsor .summary .details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-sponsor .summary span {
+    display: block;
+    margin: 20px 0px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+
+.partner-sponsor .summary span b {
+    cursor: pointer;
+}
+
+.partner-sponsor .summary .gain {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 3px solid var(--red);
+    border-radius: 50%;
+}
+
+.partner-sponsor .summary .gain div:nth-child(1) {
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+.partner-sponsor .summary .gain div:nth-child(2) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+
+.partner-sponsor .transactions {
+    max-height: 200vh;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+
+.partner-sponsor .tx-row, .partner-sponsor .user-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 2%;
+    border-top: 1px solid var(--background);
+    font-weight: 300;
+}
+
+.partner-sponsor .tx-row div, .partner-sponsor .user-row div {
+    flex: 1;
+}
+
+.partner-sponsor .user-row div:nth-child(1) {
+    flex: 2;
+}
+
+.partner-sponsor .usr {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 2% 0px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}

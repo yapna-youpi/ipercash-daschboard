@@ -1,0 +1,202 @@
+.home {}
+
+.home .balances {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid rgb(243, 11, 11); */
+}
+
+.home .transaction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    /* border: 1px solid #000; */
+}
+
+.home .transactions {
+    flex: 1;
+    background-color: var(--white);
+}
+
+.home .transactions h3 {
+    padding: 2%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 2em;
+
+}
+
+.home .transactions-list {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.home .transaction h2 {
+    width: 70%;
+    margin: auto;
+    font-weight: 400;
+    text-align: center;
+}
+
+.home .chart {
+    max-height: 500px;
+    margin-left: 20px;
+    padding: 2%;
+    background-color: var(--white);
+    transform: translateY(22px);
+}
+
+.home .chart .circle {
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    /* border: 1px solid #000; */
+}
+
+.home .chart .country {
+    margin: 15px auto;
+}
+
+.balance-bloc {
+    background-color: var(--white);
+    width: 100%;
+    margin: 20px;
+    padding: 2%;
+}
+
+.balance-bloc span {
+    font-weight: 300;
+}
+
+.balance-bloc .crypto-balance {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.balance-bloc .crypto-bloc {
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.balance-bloc .fiat-balance {
+    margin-top: 10px;
+}
+
+.balance-bloc .crypto-balance .divider {
+    width: 2px;
+    height: 60px;
+    background: var(--background);
+}
+
+.balance-bloc h3 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: right;
+}
+
+.balance-bloc h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: right;
+}
+
+.balance-bloc .bars {
+    border: none;
+    height: 10px;
+    background-color: var(--background);
+}
+
+.balance-bloc .b1 {
+    width: 50%;
+    height: 10px;
+    background-color: var(--red);
+}
+
+.balances .move {
+    margin: 20px;
+    padding: 2%;
+    text-align: center;
+}
+
+.balances .move button {
+    margin: 20px;
+    padding: 4%;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.transaction-min {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 2%;
+    border-top: 1px solid var(--background);
+    font-weight: 300;
+}
+
+/* .transaction-min.title {
+    border: 2px solid #000;
+    background-color: var(--berge);
+    font-weight: bold;
+} */
+.transaction-min div {
+    flex: 1;
+}
+
+.home .recent-users {
+    padding: 20px 4%;
+}
+
+.home .recent-list .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    border-bottom: 1px solid var(--background);
+    font-size: 1.8em;
+}
+
+.home .recent-users button {
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home .recent-list {
+    /* max-height: 600px; */
+    background-color: var(--white);
+}
+.home .users-list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.home .recent-user {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1%;
+}
+
+.home .recent-user div {
+    /* flex: 1; */
+    margin-right: 15px;
+}
+
+
+.home .bilans {
+    padding: 20px;
+}

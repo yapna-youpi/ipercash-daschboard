@@ -1,0 +1,31 @@
+.addcode {
+    margin: 20px;
+}
+
+.addcode h3 {
+    margin-top: 30px;
+}
+
+.addcode .code {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addcode .code .input-group {
+    width: 48%;
+}
+
+.addcode button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--white);
+}

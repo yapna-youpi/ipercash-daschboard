@@ -1,0 +1,46 @@
+.side {
+    /* position: fixed; */
+    /* padding: 2%; */
+}
+.side .side-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px 0px; */
+    padding: 4% 0px;
+    border-bottom: 1px solid var(--background);
+}
+.side-head h1 {
+    font-size: 1.6em;
+    font-weight: 400;
+
+}
+.side-head img {
+    display: block;
+    width: 23%;
+}
+.side-body ul {
+    /* border: 1px solid rgb(173, 57, 57); */
+}
+.side-body li {
+    padding: 10% 0%;
+    padding-left: 10%;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    /* padding: 2%; */
+    /* border: 1px solid #000; */
+    transition: all 0.1s ease-out;
+}
+.side-body li.active, .side-body li:hover {
+    cursor: pointer;
+    background-color: var(--red-transparent);
+    border-left: 3px solid var(--red);
+    color: var(--red);
+}
+
+.side-body li:hover {
+}
+.side-body li span {
+    margin-left: 15px;
+}

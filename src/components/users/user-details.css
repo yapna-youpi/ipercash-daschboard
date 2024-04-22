@@ -1,0 +1,77 @@
+.user-details {
+    /* padding: 4%; */
+    color: var(--night-blue);
+}
+
+.user-details .user {
+    width: 80%;
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.user-details .identity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-details .identity>div {
+    width: 50%;
+}
+
+.user-details img {
+    display: block;
+    width: 10%;
+}
+
+.user-details .user-info {
+    display: flex;
+    /* justify-content: space-between; */
+    text-align: left;
+}
+
+.user-details .user-info span {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.user-details .user-info span:nth-child(1) {
+    font-weight: bold;
+    flex-basis: 40%;
+    /* margin-right: 20px; */
+}
+
+.user-details .rates {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.user-details .rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    text-align: center;
+}
+.user-details .rate span:nth-child(2) {
+    margin-top: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.user-details .transactions {
+    margin-bottom: 25px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.user-details .transactions .head {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}

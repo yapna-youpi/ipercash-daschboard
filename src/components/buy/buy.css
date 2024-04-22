@@ -1,0 +1,14 @@
+.buy {}
+
+.buy .tx-list {
+    max-height: 600px;
+    /* padding-bottom: 1%; */
+    overflow-y: auto;
+}
+
+.buy .chart {
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}

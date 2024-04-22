@@ -1,0 +1,53 @@
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 90vh;
+}
+.notification .notif {
+    width: 80%;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.notification h2 {
+    /* color: var(--soft-night-blue); */
+    margin-bottom: 20px;
+    padding: 5px 0%;
+    border-bottom: 1px solid var(--berge);
+}
+.notification .line {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 15px;
+}
+.notification span {
+    flex: 1;
+}
+.notification span:nth-child(2) {
+    font-weight: 500;
+}
+.notification .button {
+    text-align: right;
+}
+.notif .button button {
+    width: 10%;
+    height: 40px;
+    margin-left: 20px;
+    background-color: var(--night-blue);
+    border: none;
+    border-radius: 5px;
+}
+.notification .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.notification .back:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,130 @@
+import React, { useState, useEffect } from 'react'
+import Skeleton from '@mui/material/Skeleton'
+import dateFormat from 'dateformat'
+
+import { getToApi } from '../../functions/utilsFunctions'
+
+import './home.css'
+import PieChart from './PieChart'
+import { getCountryCount } from './functions'
+
+function Home() {
+    const [balances, setBalances] = useState({ crypto: null, fiat: null })
+    const [loading, setLoading] = useState(true)
+    const [transactions, setTransactions] = useState({ txs: [], cm: 0, ci: 0, sn: 0 })
+    useEffect(() => {
+        getBalances()
+            .then(() => getTransactions())
+            .then(() => setLoading(false))
+    }, [])
+
+    const getBalances = async () => {
+        let crypto = await getToApi('getcryptobalances')
+        let fiat = await getToApi('getfiatbalances')
+        setBalances({ crypto: crypto, fiat: fiat })
+        return
+    }
+    const getTransactions = async () => {
+        let send = await getToApi('getsendbydate/:' + (+new Date - 86400000))  // 86400000
+        let buy = await getToApi('getbuybydate/:' +  (+new Date - 86400000))
+        let sell = await getToApi('getsellbydate/:' +  (+new Date - 86400000))  //
+        let count = getCountryCount([...send, ...buy, ...sell])
+        setTransactions({ txs: [...send, ...buy, ...sell], ...count })
+    }
+    // console.log("balance ", balances, transactions)
+    return (
+        <div className='home'>
+            <div className="balances">
+                <BalanceBloc label="Wallet de distribution" data={loading ? null : balances.crypto.wallet1} />
+                <BalanceBloc label="Wallet de reception" data={loading ? null : balances.crypto.wallet2} />
+                <BalanceBlocX label="Comptes intouch" data={loading ? null : balances.fiat} />
+            </div>
+            <div className="transaction">
+                <div className="transactions">
+                    {loading ? (<Skel variant="rectangular" heigth={500} />) : (<>
+                        <h3>Transactions Of Day</h3>
+                        <div className="transactions-list">
+                            {transactions.txs.map((item, i) => <TransactionMin data={item} ind={i} key={`tx-${i}`} />)}
+                        </div>
+                    </>)}
+                </div>
+                <div className="chart">
+                    {loading ? (<Skel variant='circular' width={250} heigth={250} />) : (<PieChart count={getCountryCount(transactions.txs)} />)}
+                    {loading ? (<>
+                        <Skel variant='text' />
+                        <Skel variant='text' />
+                        <Skel variant='text' />
+                    </>) : (<>
+                        <Country name="Cameroon" color="#cc161693" count={transactions.cm} />
+                        <Country name="Senegal" color="#2ecc71" count={transactions.sn} />
+                        <Country name="Ivory Coast" color="#ff6738" count={transactions.ci} />
+                    </>)}
+                </div>
+            </div>
+            <div className="countries">
+
+            </div>
+
+        </div>
+    )
+}
+
+const Skel = ({ variant, width = null, heigth = 30 }) => <Skeleton animation="wave" variant={variant} height={heigth} width={width} />
+
+
+function BalanceBloc({ data, label }) {
+    return (
+        <div className="balance-bloc">
+            {data ? (<>
+                <span>{label}</span>
+                <h3>{Math.round(data.eur)} &euro;</h3>
+                <h4> {Math.round(data.xaf)} XAF </h4>
+                <div className="bars">
+                    <div className="b1"></div>
+                </div>
+            </>) : (<Skel variant="rectangular" heigth={100} />)}
+        </div>
+    )
+}
+
+function BalanceBlocX({ data, label }) {
+    return (
+        <div className="balance-bloc">
+            {data ? (<>
+                <span>{label}</span>
+                <h3>{Math.round(data.total / 656)} &euro;</h3>
+                <h4> {Math.round(data.total)} XAF </h4>
+                <div className="bars">
+                    <div className="b1"></div>
+                </div>
+            </>) : (<Skel variant="rectangular" heigth={100} />)}
+        </div>
+    )
+}
+
+
+
+function TransactionMin({ data }) {
+    console.log()
+    return (
+        <div className="transaction-min">
+            <div><b>{dateFormat(data.created_at, "h:MM")}</b></div>
+            <div>{data.id}</div>
+            <div>{data.amount} XAF</div>
+            <div>{data.status.toUpperCase()}</div>
+            <div>{data.type}</div>
+        </div>
+
+    )
+}
+
+const Country = ({ name, color, count }) => {
+    return (
+        <div className='country'>
+            <div className="color"></div>
+            <h3>{name} : {count} Transactions</h3>
+        </div>
+    )
+}
+
+export default Home

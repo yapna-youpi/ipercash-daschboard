@@ -1,0 +1,177 @@
+.promo {
+    min-height: 80vh;
+    padding: 4%;
+}
+
+.promo .identity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 25px;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.promo .identity h2 {
+    margin: 10px 0px;
+}
+
+.promo .identity button {
+    display: block;
+    height: 40px;
+    margin: 20px 0px;
+    padding: 0px 15px;
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+}
+.promo .identity > div:nth-child(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--red);
+}
+.promo .tx-nber {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--red);
+}
+.promo .codes span {
+    display: block;
+    margin-top: 5px;
+    color: var(--soft-night-blue);
+}
+
+.promo .codes {
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.promo .codes-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.promo .search-bar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 40px;
+    padding: 2px 1%;
+    border: 1px solid var(--night-blue);
+    border-radius: 5px;
+}
+
+.promo .search-bar input {
+    display: block;
+    width: 90%;
+    height: 38px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.promo .codes-list {
+    min-height: 280px;
+}
+
+.promo .codes-list .user-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+.promo .codes-list .user-row:nth-child(even) {
+    background: rgba(214, 214, 214, 0.192);
+}
+
+/* .promo .codes-list .user-row:nth-child(odd) {background: #FFF} */
+.promo .codes-list .user-row:hover {
+    background: rgba(214, 214, 214, 0.192);
+    cursor: pointer;
+}
+
+.promo .user-row .s1 {
+    display: flex;
+    align-items: center;
+}
+
+.promo .user-row .abr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: rgb(245, 99, 99);
+    border-radius: 50%;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.promo .user-row h3 {
+    font-weight: 500;
+}
+
+.promo .update-code {
+    /* border: 1px solid #000; */
+    max-width: 40vw;
+    margin-top: 20px;
+}
+
+.promo .update-code h2 {
+    margin-bottom: 20px;
+}
+.promo .update-code .details {
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.promo .update-code span {
+    display: block;
+    margin: 20px 0px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+.promo .update-code .gain div:nth-child(1){
+    font-size: 3.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+.promo .update-code .gain div:nth-child(2){
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--red);
+    text-align: center;
+}
+
+.promo .update-code .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.promo .update-code button {
+    margin-right: 20px;
+    padding: 2%;
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}

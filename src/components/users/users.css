@@ -1,0 +1,108 @@
+.users {
+    min-height: 80vh;
+    padding: 4%;
+    color: var(--night-blue);
+}
+.users span {
+    margin-top: 5px;
+}
+.users .users-container {
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.users .users-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.users .search-bar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 40px;
+    padding: 2px 1%;
+    border: 1px solid  var(--night-blue);
+    border-radius: 5px;
+}
+.users .search-bar input {
+    display: block;
+    width: 90%;
+    height: 38px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+}
+.users .users-head button {
+    display: block;
+    height: 40px;
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+}
+.users .users-list {
+    min-height: 280px;
+}
+.users .users-list .user-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+.users .users-list .user-row:nth-child(even) {background: rgba(214, 214, 214, 0.192);}
+.users .users-list .user-row:hover {
+    background: rgba(214, 214, 214, 0.192);
+    cursor: pointer;
+}
+.users .user-row .s1 {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+.users .user-row .s2, .users .user-row .s3 {
+    flex: 1;
+    text-align: right;
+}
+.users .user-row .abr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: rgb(245, 99, 99);
+    border-radius: 50%;
+    color: var(--white);
+    font-weight: bold;
+}
+.users .user-row h3 {
+    font-weight: 500;
+}
+.users .update-user {
+    width: 50vw;
+    margin-top: 20px;
+}
+.users .update-user h2 {
+    margin-bottom: 20px;
+}
+.users .update-user span {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: var(--night-blue);
+}
+.users .update-user .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.users .update-user button {
+    padding: 2%;
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
