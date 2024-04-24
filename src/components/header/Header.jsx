@@ -47,7 +47,7 @@ function Header() {
             </div>
             <div className="user">
                 <img src={logo} alt="" />
-                <h4>{user.userName}</h4>zz
+                <h4>{user.userName}</h4>
             </div>
             {/* {<div className="beta-div">
                 Sandbox
