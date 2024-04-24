@@ -200,3 +200,12 @@
 .home .bilans {
     padding: 20px;
 }
+.lignet{
+    padding: 0.5px;
+    height: 1px;
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(130, 127, 127, 0.115);
+    outline: none;
+    border: none;
+}

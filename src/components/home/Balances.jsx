@@ -39,6 +39,8 @@ function Balances() {
         setModal({ open: true, crypto })
     }
 
+    console.log(balances, " les balances")
+
     return (
         <div className="balances" ref={ref}>
             <BalanceBloc label="Wallet de distribution" data={loading === 'all' ? null : balances.crypto.wallet1} />
@@ -58,11 +60,13 @@ function Balances() {
     )
 }
 
+
 export default Balances
 
 const Skel = ({ variant, width = null, heigth = 30 }) => <Skeleton animation="wave" variant={variant} height={heigth} width={width} />
 
 function BalanceBloc({ data, label, click }) {
+    console.log(data, "les datas")
     return (
         <div className="balance-bloc">
             {data ? (<>
@@ -82,8 +86,19 @@ function BalanceBloc({ data, label, click }) {
                     <div className="divider"></div>
                     <div className="crypto-bloc" onClick={() => click('USDT')}>
                         <h4>USDT</h4>
-                        <h3>{Math.floor(data.usdtEur)} &euro;</h3>
-                        <span>{Math.floor(data.usdtXaf)} XAF</span>
+                        <h5>Tron</h5>
+                        <h5>{Math.floor(data.tronEur)}&euro;</h5>
+
+                        <h5>{Math.floor(data.tronEur * 655.55)} XAF</h5>
+                        <hr className='lignet' />
+
+                        <h5>ERC</h5>
+                        <h5>{Math.floor(data.usdtEur)}&euro;</h5>
+
+                        <h5>{Math.floor(data.usdtXaf )} XAF</h5>
+
+                        {/* <h3>{Math.floor(data.usdtEur)} &euro;</h3>
+                        <span>{Math.floor(data.usdtXaf)} XAF</span> */}
                     </div>
                 </div>
                 <h4> {Math.floor(data.xaf)} XAF </h4>
