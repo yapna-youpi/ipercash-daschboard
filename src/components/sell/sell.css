@@ -1,6 +1,9 @@
 .sell {}
 
-
+.sell .tx-list{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .sell .chart {
     margin: 2%;
     padding: 2%;

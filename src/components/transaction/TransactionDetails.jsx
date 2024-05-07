@@ -27,6 +27,8 @@ function Transaction({ history }) {
         }
     }, [])
 
+    console.log("le path route", history.location.pathname.split(':')[1])
+
     const getData = async () => {
         setLoading('all');
         let data = await getToApi('gettransaction/' + txId)
@@ -93,10 +95,11 @@ function Transaction({ history }) {
         }
     }
 
-    // console.log("route ", tx, user)
+    console.log("le tx vrai ", txId[2])
+    console.log("le tx alors est ", txId)
     return (
         <div className="tx-details">
-            {txId[2] === 'C' ? <center><h2>Les operations de transferts ne sont pas encore prise en charge</h2></center>
+            {txId[3] === 'C' ? <center><h2>Les operations de transferts ne sont pas encore prise en charge</h2></center>
                 : <>
                     <div className='shadows'>
                         {

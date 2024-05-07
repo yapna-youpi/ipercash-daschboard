@@ -4,6 +4,8 @@
     max-height: 600px;
     /* padding-bottom: 1%; */
     overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .buy .chart {

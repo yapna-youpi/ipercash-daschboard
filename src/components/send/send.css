@@ -1,9 +1,13 @@
 .transaction {
     /* border: 1px solid #000; */
 }
+
 .transactions {
     margin: 2%;
-    /* padding: 2%; */
+}
+.transaction .tx-list{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .transaction .head {

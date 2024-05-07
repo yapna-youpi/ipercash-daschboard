@@ -30,6 +30,8 @@
 .home .transactions-list {
     max-height: 600px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .home .transaction h2 {
