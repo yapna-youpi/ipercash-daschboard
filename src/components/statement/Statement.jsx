@@ -17,7 +17,7 @@ function Statement() {
 	// const [transactions, setTransactions]=useState({txs: [], cm:0, ci:0, sn:0})
 	useEffect(() => {
 		getBareData().then((data) => {
-			// console.log("the bare operations", data)
+			console.log("the bare operations", data)
 			getData(data, defaultPeriod)
 			setBareOperations(data);
 			setLoading(false);

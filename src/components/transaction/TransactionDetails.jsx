@@ -89,6 +89,8 @@ function Transaction({ history }) {
                 return process.env.REACT_APP_ETHERSCAN_URL + 'tx/' + txid
             case 'USDT':
                 return process.env.REACT_APP_ETHERSCAN_URL + 'tx/' + txid
+            case 'TRC20':
+                return process.env.REACT_APP_TRON_URL + 'tx/' + txid
 
             default:
                 return '#'
@@ -97,6 +99,7 @@ function Transaction({ history }) {
 
     console.log("le tx vrai ", txId[2])
     console.log("le tx alors est ", txId)
+    console.log("le tx alors est ", tx)
     return (
         <div className="tx-details">
             {txId[3] === 'C' ? <center><h2>Les operations de transferts ne sont pas encore prise en charge</h2></center>
@@ -123,7 +126,7 @@ function Transaction({ history }) {
                                             </span>
                                         </div>
                                         <div className="right">
-                                            <span>Montant XAF &ensp;:&ensp; &ensp; <b>{tx.amountFiat}</b> </span>
+                                            <span>Montant XAF &ensp;:&ensp; &ensp; <b>{tx.fiat_pay}</b> Xaf </span>
                                             <span>Mobile money &ensp;:&ensp; &ensp; {tx.phone} </span>
                                             <span>Operateur mobile money &ensp;:&ensp; &ensp; {tx.provider} </span>
                                             <span>Date de debut &ensp;:&ensp; &ensp; {dateFormat(tx.created_at, "d mmmm yyyy, HH:MM:ss")} </span>

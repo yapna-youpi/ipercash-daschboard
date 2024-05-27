@@ -66,7 +66,7 @@ function Send() {
         }, 90 * 1000)
     }
 
-    // console.log("the transactions ", result)
+    console.log("the transactions ", transactions)
     return (
         <div className='send'>
             {/* <h1>Send</h1> */}
@@ -87,7 +87,7 @@ function Send() {
                         {/* <div>12:00</div> */}
                         <div>Paiement</div>
                         {/* <div>SEND</div> */}
-                    </div>
+                    </div>/
                     {loading ? (<>
                         <div className="loader"><ReactLoading type="spin" color='#CC1616' height={150} width={150} /></div>
                     </>) : (<>{
@@ -147,7 +147,7 @@ const Transaction = ({ data }) => {
             <div><b>{dateFormat(data.created_at, "dd-mm-yyyy, HH:MM")}</b></div>
             <div className='tx-id' onClick={()=>history.push('/transaction/:'+data.id)} >{data.id}</div>
             {/* <div>{data.id}</div> */}
-            <div>{data.mercuryo}&euro; / {data.amount} XAF</div>
+            <div>{Math.round(data.mercuryo /655.77)}&euro; / {data.amount} XAF</div>
             <div>{data.phone}</div>
             <div>{data.status}</div>
             <div>{getCountry(data.phone)}</div>

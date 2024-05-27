@@ -63,8 +63,10 @@ const extractOperationsData = (operations) => {
 };
 
 function StatementGraph({ operations }) {
+    
     const [state, setState] = useState({ buy: extractOperationsData(operations.buy), sell: extractOperationsData(operations.sell) });
-    const data = {
+    console.log("le state",state.sell.numbers)
+    const data1 = {
         labels: state.buy.months,
         datasets: [
             {
@@ -74,6 +76,11 @@ function StatementGraph({ operations }) {
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
                 yAxisID: 'y',
             },
+        ],
+    };
+    const data2 = {
+        labels: state.sell.months,
+        datasets: [
             {
                 label: 'Rachat de crypto',
                 data: state.sell.months.map(item => state.sell.numbers[item]),
@@ -84,7 +91,10 @@ function StatementGraph({ operations }) {
         ],
     };
     return (
-        <Line options={options} data={data} />
+        <>
+        <Line options={options} data={data1} />
+        <Line options={options} data={data2} />
+        </>
     )
 }
 
